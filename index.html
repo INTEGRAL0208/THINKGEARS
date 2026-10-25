@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>THINKGEARS Electronics</title>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#0a1f44;--cy:#00a8e8;--bg:#fff;--soft:#f3f6fa;--tx:#1c2430;--mu:#5b6778;--bd:#dde4ee;--card:#fff;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0b1220;--soft:#111a2c;--tx:#e8edf5;--mu:#9aa7bb;--bd:#223049;--card:#101a2e;--navy:#050d1f}}
+*{box-sizing:border-box}html{scroll-padding-top:70px}
+body{margin:0;font-family:Manrope,system-ui,sans-serif;background:var(--bg);color:var(--tx)}
+a{color:inherit;text-decoration:none}button{font:inherit;cursor:pointer}
+.w{max-width:1160px;margin:auto;padding:0 16px}
+.bar{background:var(--navy);color:#cfe9f7;font-size:12px;text-align:center;padding:7px}
+header{position:sticky;top:0;z-index:5;background:var(--navy);color:#fff;border-top:1px solid #16315f}
+.hd{display:flex;align-items:center;gap:14px;padding:10px 16px;max-width:1160px;margin:auto;flex-wrap:wrap}
+.logo{display:flex;align-items:center;gap:8px;font-weight:800;letter-spacing:.5px}
+.logo small{display:block;font-weight:600;font-size:9px;letter-spacing:2px;color:var(--cy)}
+.srch{flex:1;min-width:180px;display:flex}.srch input{flex:1;padding:10px 12px;border:0;border-radius:8px 0 0 8px;font:inherit}
+.srch button{border:0;background:var(--cy);color:#fff;padding:0 14px;border-radius:0 8px 8px 0;font-weight:700}
+nav{display:flex;gap:16px;font-size:14px;font-weight:600}nav a:hover,.ic:hover{color:var(--cy)}
+.ic{background:none;border:0;color:#fff;font-weight:700;padding:6px}
+#mn{display:none}
+@media(max-width:760px){nav{display:none;width:100%;flex-direction:column;gap:10px;padding:6px 0}nav.o{display:flex}#mn{display:block}}
+.hero{background:linear-gradient(135deg,var(--navy),#12408a);color:#fff;padding:48px 0}
+.hero .w{display:grid;grid-template-columns:1.1fr .9fr;gap:24px;align-items:center}
+@media(max-width:760px){.hero .w{grid-template-columns:1fr}}
+h1{font-size:clamp(32px,6vw,52px);line-height:1.05;margin:0 0 12px}
+.hero p{color:#bcd3ee;max-width:460px}
+.btn{display:inline-block;border:0;border-radius:8px;padding:11px 18px;font-weight:700;background:var(--cy);color:#fff}
+.btn.g{background:transparent;border:1.5px solid #6fb5e0;color:#fff}
+.btn.s{background:var(--navy);color:#fff}
+.sec{padding:36px 0}h2{font-size:24px;margin:0 0 16px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:14px}
+.cat{background:var(--soft);border:1px solid var(--bd);border-radius:12px;padding:16px;font-weight:700;font-size:14px;cursor:pointer}
+.cat:hover{border-color:var(--cy)}
+.card{background:var(--card);border:1px solid var(--bd);border-radius:12px;overflow:hidden;display:flex;flex-direction:column}
+.card .im{background:var(--soft);cursor:pointer}.card .b{padding:12px;display:flex;flex-direction:column;gap:4px;flex:1}
+.br{font-size:11px;color:var(--mu)}.pr{font-weight:800;font-size:18px}
+.st{font-size:12px;font-weight:700;color:#0a8f5b}.st.x{color:#c0392b}
+.tag{font-size:10px;background:#fff3cd;color:#7a5c00;padding:2px 6px;border-radius:4px;width:max-content}
+.card .btn{margin-top:auto;width:100%}
+.tb{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:14px}
+select,input.f{padding:9px;border:1px solid var(--bd);border-radius:8px;background:var(--card);color:var(--tx);font:inherit}
+table{width:100%;border-collapse:collapse}td{padding:9px;border-bottom:1px solid var(--bd);font-size:14px}td:first-child{color:var(--mu);width:42%}
+.pd{display:grid;grid-template-columns:1fr 1fr;gap:24px}@media(max-width:760px){.pd{grid-template-columns:1fr}}
+#dr{position:fixed;right:0;top:0;bottom:0;width:min(380px,100%);background:var(--card);border-left:1px solid var(--bd);z-index:9;padding:16px;transform:translateX(100%);transition:.25s;overflow:auto}
+#dr.o{transform:none}
+.row{display:flex;justify-content:space-between;gap:8px;align-items:center;padding:8px 0;border-bottom:1px solid var(--bd);font-size:14px}
+.q button{width:26px;height:26px;border:1px solid var(--bd);background:var(--soft);color:var(--tx);border-radius:6px}
+.notice{background:#fff3cd;color:#6b5200;padding:10px;border-radius:8px;font-size:13px;margin:10px 0}
+footer{background:var(--navy);color:#a9bfd9;padding:30px 0 40px;font-size:13px;margin-top:30px}
+footer h4{color:#fff;margin:0 0 8px}.fg{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:20px}
+details{border:1px solid var(--bd);border-radius:8px;padding:10px;margin-bottom:8px;background:var(--card)}
+.wa{position:fixed;left:12px;bottom:calc(12px + env(safe-area-inset-bottom,0px));background:#128c4a;color:#fff;border-radius:99px;padding:10px 14px;font-weight:700;font-size:13px;z-index:4}
+</style></head><body>
+<div class="bar">Welcome to THINKGEARS Electronics — Your Engineering and Electronics Store. <b>(Demo store: sample data)</b></div>
+<header><div class="hd">
+<a href="#home" class="logo"><svg width="34" height="34" viewBox="0 0 40 40" fill="none" stroke="#00a8e8" stroke-width="2.5"><circle cx="20" cy="20" r="8"/><path d="M20 3v7M20 30v7M3 20h7M30 20h7M8 8l5 5M27 27l5 5M32 8l-5 5M13 27l-5 5"/><circle cx="20" cy="20" r="2.5" fill="#00a8e8"/></svg><span>THINKGEARS<small>ELECTRONICS</small></span></a>
+<form class="srch" onsubmit="event.preventDefault();q=this.q.value;go('shop')"><input name="q" placeholder="Search products, SKU, brand…" aria-label="Search"><button>Search</button></form>
+<button id="mn" class="ic" onclick="document.querySelector('nav').classList.toggle('o')">☰ Menu</button>
+<nav><a href="#home">Home</a><a href="#shop">Shop All</a><a href="#cats">Categories</a><a href="#new">New Arrivals</a><a href="#deals">Deals</a><a href="#about">About</a><a href="#contact">Contact</a></nav>
+<button class="ic" id="ab" onclick="go('account')">Account</button>
+<button class="ic" onclick="go('wish')">♡ <span id="wc">0</span></button>
+<button class="ic" onclick="dr()">Cart (<span id="cc">0</span>)</button>
+</div></header>
+<main id="app"></main>
+<aside id="dr" aria-label="Cart"></aside>
+<a class="wa" href="#contact" onclick="alert('WhatsApp number not configured yet.');return false">WhatsApp enquiry</a>
+<footer><div class="w fg"><div><h4>THINKGEARS Electronics</h4>Powering Ideas. Engineering the Future.<br>Address: [PLACEHOLDER]<br>Phone: [PLACEHOLDER]<br>Email: [PLACEHOLDER]</div>
+<div><h4>Shop</h4><a href="#shop">All products</a><br><a href="#cats">Categories</a><br><a href="#new">New arrivals</a></div>
+<div><h4>Support</h4><a href="#faq">FAQ</a><br><a href="#contact">Contact</a><br><a href="#admin">Admin</a><br>Shipping &amp; returns: [policy to be configured]</div>
+<div><h4>Newsletter</h4><form onsubmit="event.preventDefault();alert('Demo only: not connected to an email service.')"><input class="f" placeholder="Email" style="width:100%;margin-bottom:6px"><button class="btn">Subscribe</button></form></div></div></footer>
+<script>
+const CATS=["Microcontrollers & Dev Boards","Sensors & Modules","Electronic Components","Robotics & Automation","Power Supplies & Batteries","Test & Measurement","Soldering & Repair Tools","Cables, Connectors & Accessories","IoT & Wireless","Electrical & Solar"];
+const P=[
+["esp32","ESP32 DevKit (30-pin)","Espressif",0,"TG-MCU-001",8500,12,"WiFi + Bluetooth dev board","Interface:WiFi, BLE, UART, SPI, I2C|Logic level:3.3 V|Package:Dev board, headers"],
+["uno","Arduino-compatible Uno R3","Generic",0,"TG-MCU-002",9800,6,"ATmega328P-based board","MCU:ATmega328P|Logic level:5 V|Interface:USB, UART, SPI, I2C"],
+["dht11","DHT11 Temp & Humidity Sensor","Generic",1,"TG-SNS-001",1800,40,"Digital temp/humidity module","Interface:Single-wire digital|Supply:3.3–5 V"],
+["relay","5V Relay Module (1-channel)","Generic",3,"TG-RLY-001",1500,0,"Optocoupler-isolated relay","Coil:5 V|Contacts:rated per supplier datasheet"],
+["l298","L298N Motor Driver","Generic",3,"TG-MTR-001",3200,15,"Dual H-bridge driver","Channels:2|Supply:per supplier datasheet"],
+["bread","830-point Breadboard","Generic",2,"TG-CMP-001",2500,25,"Solderless prototyping board","Tie points:830|Package:1 board"],
+["jump","Jumper Wire Set (120 pcs)","Generic",7,"TG-ACC-001",2200,30,"M-M / M-F / F-F assorted","Package:120 pcs"],
+["multi","Digital Multimeter","Generic",5,"TG-TST-001",12500,5,"Handheld DMM","Functions:per supplier datasheet"],
+["iron","Soldering Iron 60W","Generic",6,"TG-SLD-001",6500,9,"Adjustable temperature iron","Power:60 W"],
+["psu","12V 5A Power Supply","Generic",4,"TG-PWR-001",9500,7,"Regulated DC adapter","Output:12 V, 5 A"],
+["res","Resistor Kit (600 pcs)","Generic",2,"TG-CMP-002",4800,18,"1/4 W assorted values","Package:600 pcs"],
+["cap","Electrolytic Capacitor Kit","Generic",2,"TG-CMP-003",5200,14,"Assorted values","Package:per kit listing"]];
+const pr=P.map((a,i)=>({id:a[0],n:a[1],b:a[2],c:a[3],sku:a[4],p:a[5],s:a[6],d:a[7],sp:a[8].split("|").map(x=>x.split(/:(.*)/s)),i,smp:1}));let SEED=pr.map(x=>({...x}));try{const t=JSON.parse(localStorage.getItem("tg_prod")||"null");if(t)pr=t}catch(e){}const savep=()=>{try{localStorage.setItem("tg_prod",JSON.stringify(pr))}catch(e){alert("Browser storage is full: use smaller images or delete some products.")}};
+let q="",cat=-1,sort="rel",cart={},wish={};
+try{cart=JSON.parse(localStorage.getItem("tg_cart")||"{}");wish=JSON.parse(localStorage.getItem("tg_w")||"{}")}catch(e){}
+const N=v=>"₦"+v.toLocaleString("en-NG"),$=s=>document.getElementById(s);
+const save=()=>{Object.keys(cart).forEach(k=>{if(!pr.find(x=>x.id==k))delete cart[k]});try{localStorage.setItem("tg_cart",JSON.stringify(cart));localStorage.setItem("tg_w",JSON.stringify(wish))}catch(e){}$("cc").textContent=Object.values(cart).reduce((a,b)=>a+b,0);$("wc").textContent=Object.keys(wish).length;$("ab").textContent=me()?"Account ✓":"Account"};
+const img=p=>p&&p.im?`<img src="${p.im}" alt="" style="width:100%;aspect-ratio:10/7;object-fit:cover;display:block">`:`<svg viewBox="0 0 200 140" width="100%"><rect width="200" height="140" fill="none"/><rect x="40" y="30" width="120" height="80" rx="6" fill="#0d5c4a"/><rect x="82" y="55" width="36" height="30" rx="3" fill="#222"/><g fill="#e0b84c">${[0,1,2,3,4,5,6].map(i=>`<rect x="${48+i*15}" y="34" width="6" height="6"/><rect x="${48+i*15}" y="100" width="6" height="6"/>`).join("")}</g><path d="M60 70h18M122 70h18M100 45v10" stroke="#7fd6c2" stroke-width="1.5"/><text x="100" y="128" font-size="9" text-anchor="middle" fill="#7a8699">SAMPLE IMAGE</text></svg>`;
+function card(p){return `<div class="card"><div class="im" onclick="go('p-${p.id}')">${img(p)}</div><div class="b">${p.smp?'<span class="tag">SAMPLE DATA</span>':''}<div class="br">${p.b} · ${p.sku}</div><a href="#p-${p.id}"><b>${p.n}</b></a><div class="pr">${N(p.p)}</div><div class="st ${p.s?'':'x'}">${p.s?'In stock':'Out of stock'}${p.smp?' (sample)':''}</div><div style="display:flex;gap:6px"><button class="btn" ${p.s?'':'disabled style="opacity:.4"'} onclick="add('${p.id}')">Add to Cart</button><button class="btn s" aria-label="Wishlist" style="width:44px" onclick="tw('${p.id}')">${wish[p.id]?'♥':'♡'}</button></div></div></div>`}
+function add(id,n=1){const p=pr.find(x=>x.id==id);cart[id]=Math.min((cart[id]||0)+n,p.s);save();dr(true)}
+function tw(id){wish[id]?delete wish[id]:wish[id]=1;save();render()}
+function dr(open){const d=$("dr");if(open!==true&&d.classList.contains("o")){d.classList.remove("o");return}
+const it=Object.keys(cart).map(id=>[pr.find(x=>x.id==id),cart[id]]);const sub=it.reduce((a,[p,n])=>a+p.p*n,0);
+d.innerHTML=`<button class="ic" style="color:var(--tx)" onclick="dr()">✕ Close</button><h2>Your cart</h2>`+(it.length?it.map(([p,n])=>`<div class="row"><span>${p.n}<br><b>${N(p.p)}</b></span><span class="q"><button onclick="ch('${p.id}',-1)">−</button> ${n} <button onclick="ch('${p.id}',1)">+</button></span></div>`).join("")+`<div class="row"><b>Subtotal</b><b>${N(sub)}</b></div><p class="br">Shipping is calculated at checkout from delivery rules (not yet configured).</p><button class="btn" style="width:100%" onclick="go('checkout');dr()">Checkout</button>`:"<p>Your cart is empty.</p>");d.classList.add("o")}
+function ch(id,k){const p=pr.find(x=>x.id==id);cart[id]=(cart[id]||0)+k;if(cart[id]<=0)delete cart[id];else cart[id]=Math.min(cart[id],p.s);save();dr(true)}
+function go(h){location.hash=h;render()}
+function list(arr){return arr.length?`<div class="grid">${arr.map(card).join("")}</div>`:`<p>No products match your search. Try a different keyword or clear filters.</p>`}
+function shop(arr,title){let a=arr.filter(p=>(cat<0||p.c==cat)&&(!q||(p.n+p.sku+p.b+p.d+CATS[p.c]).toLowerCase().includes(q.toLowerCase())));
+if(sort=="lo")a.sort((x,y)=>x.p-y.p);if(sort=="hi")a.sort((x,y)=>y.p-x.p);if(sort=="new")a.sort((x,y)=>y.i-x.i);
+return `<div class="w sec"><h2>${title}</h2><div class="tb"><select onchange="cat=+this.value;render()"><option value="-1">All categories</option>${CATS.map((c,i)=>`<option value="${i}" ${cat==i?'selected':''}>${c}</option>`).join("")}</select><select onchange="sort=this.value;render()"><option value="rel">Relevance</option><option value="lo" ${sort=='lo'?'selected':''}>Price: low to high</option><option value="hi" ${sort=='hi'?'selected':''}>Price: high to low</option><option value="new" ${sort=='new'?'selected':''}>Newest</option></select>${q?`<button class="btn s" onclick="q='';render()">Clear “${q}”</button>`:''}</div>${list(a)}</div>`}
+function render(){const h=location.hash.slice(1)||"home";let x="";
+if(h=="home")x=`<section class="hero"><div class="w"><div><h1>Build Smarter. Create More.</h1><p>Discover the electronic components, engineering tools, and technology essentials that bring your ideas to life.</p><a class="btn" href="#shop">Shop Products</a> <a class="btn g" href="#cats">Explore Categories</a></div><div style="background:#ffffff14;border-radius:16px;padding:12px">${img()}</div></div></section>
+<div class="w sec" id="cats"><h2>Featured categories</h2><div class="grid">${CATS.map((c,i)=>`<div class="cat" onclick="cat=${i};go('shop')">${c}</div>`).join("")}</div></div>
+<div class="w sec"><h2>Featured products</h2>${list(pr.slice(0,8))}<p><a class="btn s" href="#shop">View All Products</a></p><div class="notice">All products, prices, stock levels are demonstration data until replaced with verified business information. No reviews are shown because none exist yet.</div></div>
+<div class="w sec"><h2>Why shop with THINKGEARS?</h2><div class="grid"><div class="cat">Clear product specifications<br><small>Only supplier-verified data</small></div><div class="cat">Customer support<br><small>Contact channels to be configured</small></div><div class="cat">Secure payments<br><small>Paystack/Flutterwave once configured</small></div></div></div>
+<div class="w sec" id="faq"><h2>FAQ</h2>${["How do I order?|Add items to the cart and check out as guest or with an account (backend required).","Which payments are supported?|Paystack or Flutterwave will be enabled once credentials are configured.","Delivery and returns?|Policies will be published once set by the business.","Will this board work with my project?|Check each product's compatibility and specification table."].map(f=>`<details><summary><b>${f.split("|")[0]}</b></summary>${f.split("|")[1]}</details>`).join("")}</div>`;
+else if(h=="shop"||h=="cats")x=shop(pr,"Shop All");
+else if(h=="new")x=shop(pr.slice(-4),"New Arrivals (sample)");
+else if(h=="deals")x=`<div class="w sec"><h2>Special offers</h2><p>No active promotions. Offers appear here once real promotions are created in the admin dashboard.</p></div>`;
+else if(h=="wish")x=`<div class="w sec"><h2>Wishlist</h2>${list(pr.filter(p=>wish[p.id]))}</div>`;
+else if(h=="about")x=`<div class="w sec"><h2>About THINKGEARS Electronics</h2><p>Powering Ideas. Engineering the Future. A store for students, hobbyists, embedded developers, engineers and technicians in Nigeria. [Business story to be supplied.]</p></div>`;
+else if(h=="contact")x=`<div class="w sec"><h2>Contact</h2><p>Phone/WhatsApp: [PLACEHOLDER] · Email: [PLACEHOLDER] · Hours: [PLACEHOLDER]</p><form onsubmit="event.preventDefault();alert('Demo: form needs a backend.')"><input class="f" placeholder="Name" required><br><br><input class="f" type="email" placeholder="Email" required><br><br><textarea class="f" placeholder="Message" rows="4" style="width:100%;max-width:420px"></textarea><br><br><button class="btn">Send</button></form></div>`;
+else if(h=="checkout"){const it=Object.keys(cart).map(id=>[pr.find(x=>x.id==id),cart[id]]);const sub=it.reduce((a,[p,n])=>a+p.p*n,0);
+x=`<div class="w sec"><h2>Checkout (demo)</h2>${it.map(([p,n])=>`<div class="row"><span>${p.n} × ${n}</span><b>${N(p.p*n)}</b></div>`).join("")||"Cart is empty."}<div class="row"><b>Subtotal</b><b>${N(sub)}</b></div><p>Shipping: calculated from configured delivery zones (none set yet).</p><input class="f" placeholder="Full name"> <input class="f" placeholder="Phone"><br><br><input class="f" placeholder="Delivery address" style="width:100%;max-width:420px"><div class="notice">Payment is not connected. Live payments need a server verifying Paystack/Flutterwave transactions with secret keys. No order will be created or confirmed here.</div><button class="btn" onclick="alert('Demo checkout: no payment taken, no order created.')">Pay with Paystack (sandbox, not connected)</button></div>`}
+else if(h=="account")x=acct();else if(h=="admin")x=admin();else if(h.startsWith("p-")){const p=pr.find(z=>z.id==h.slice(2));if(p){x=`<div class="w sec"><div class="pd"><div class="card">${img(p)}</div><div>${p.smp?'<span class="tag">SAMPLE DATA</span>':''}<h2>${p.n}</h2><div class="br">${p.b} · SKU ${p.sku} · ${CATS[p.c]}</div><div class="pr" style="font-size:26px">${N(p.p)}</div><div class="st ${p.s?'':'x'}">${p.s?p.s+' in stock':'Out of stock'}${p.smp?' (sample)':''}</div><p>${p.d}.</p><button class="btn" ${p.s?'':'disabled'} onclick="add('${p.id}')">Add to Cart</button> <button class="btn s" onclick="add('${p.id}');go('checkout')">Buy Now</button><h3>Specifications</h3><table>${p.sp.map(r=>`<tr><td>${r[0]}</td><td>${r[1]}</td></tr>`).join("")}</table><p class="br">Specs are placeholders; confirm against supplier datasheets before listing. Shipping &amp; returns: to be configured.</p></div></div><h2 style="margin-top:30px">Related products</h2>${list(pr.filter(z=>z.c==p.c&&z.id!=p.id).concat(pr).filter(z=>z.id!=p.id).slice(0,4))}</div>`}}
+$("app").innerHTML=x||`<div class="w sec"><h2>Page not found</h2><a href="#home">Back home</a></div>`;save();window.scrollTo(0,0)}
+const esc=s=>String(s==null?'':s).replace(/[&<>"']/g,c=>"&#"+c.charCodeAt(0)+";");
+const U=()=>{try{return JSON.parse(localStorage.getItem("tg_users")||"[]")}catch(e){return[]}};
+const SU=u=>{try{localStorage.setItem("tg_users",JSON.stringify(u))}catch(e){}};
+const me=()=>{try{const e=localStorage.getItem("tg_sess");return U().find(u=>u.e==e)}catch(e){}};
+const msg=t=>{const m=$("em");if(m)m.textContent=t};
+async function hs(pw,salt){const b=await crypto.subtle.digest("SHA-256",new TextEncoder().encode(salt+pw));return[...new Uint8Array(b)].map(x=>x.toString(16).padStart(2,"0")).join("")}
+async function reg(adm){const f=$("af"),e=f.e.value.trim().toLowerCase(),pw=f.pw.value,n=f.n?f.n.value.trim():"Admin";
+if(!/^\S+@\S+\.\S+$/.test(e)||pw.length<8)return msg("Enter a valid email and a password of at least 8 characters.");
+const us=U();if(us.some(u=>u.e==e))return msg("That email is already registered.");
+const s=[...crypto.getRandomValues(new Uint8Array(8))].join("");
+us.push({e,n,s,h:await hs(pw,s),r:adm?"admin":"customer"});SU(us);try{localStorage.setItem("tg_sess",e)}catch(x){}render()}
+async function login(){const f=$("af"),e=f.e.value.trim().toLowerCase(),u=U().find(x=>x.e==e);
+if(!u||u.h!=await hs(f.pw.value,u.s))return msg("Incorrect email or password.");
+try{localStorage.setItem("tg_sess",e)}catch(x){}render()}
+function out(){try{localStorage.removeItem("tg_sess")}catch(e){}ed=null;render()}
+let am="in",ed=null,pim=null;
+function af(adm){return `<div class="w sec" style="max-width:420px"><h2>${adm?'Create admin account':am=="in"?'Log in':'Sign up'}</h2><form id="af" onsubmit="event.preventDefault();${adm?'reg(1)':am=='in'?'login()':'reg(0)'}">${am=="up"&&!adm?'<input class="f" name="n" placeholder="Full name" required style="width:100%"><br><br>':''}<input class="f" name="e" type="email" placeholder="Email" required style="width:100%"><br><br><input class="f" name="pw" type="password" placeholder="Password (8+ characters)" required style="width:100%"><p id="em" style="color:#c0392b;font-size:13px"></p><button class="btn">${adm?'Create admin':am=="in"?'Log in':'Sign up'}</button></form>${adm?'':`<p><a href="#account" style="color:var(--cy)" onclick="am=am=='in'?'up':'in';render();return false">${am=="in"?'New here? Create an account':'Have an account? Log in'}</a></p>`}</div>`}
+function acct(){const u=me();if(!u)return af(0);return `<div class="w sec"><h2>Hello, ${esc(u.n)}</h2><p>${esc(u.e)} · ${u.r}</p>${u.r=="admin"?'<a class="btn" href="#admin">Admin dashboard</a> ':''}<button class="btn s" onclick="out()">Log out</button><p class="br">Order history and saved addresses need the backend.</p></div>`}
+function pick(inp){const f=inp.files[0];if(!f)return;const r=new FileReader();r.onload=()=>{const i=new Image();i.onload=()=>{const k=Math.min(1,800/Math.max(i.width,i.height)),c=document.createElement("canvas");c.width=i.width*k;c.height=i.height*k;c.getContext("2d").drawImage(i,0,0,c.width,c.height);pim=c.toDataURL("image/jpeg",.8);const v=$("pv");v.src=pim;v.style.display="block"};i.src=r.result};r.readAsDataURL(f)}
+function sv(){const f=$("pf"),o={n:f.n.value.trim(),b:f.b.value.trim()||"Generic",c:+f.c.value,sku:f.sku.value.trim(),p:+f.p.value,s:Math.max(0,Math.floor(+f.s.value)),d:f.d.value.trim(),smp:f.rl.checked?0:1,sp:f.sp.value.split("\n").filter(l=>l.includes(":")).map(l=>{const k=l.indexOf(":");return[l.slice(0,k).trim(),l.slice(k+1).trim()]})};
+if(!o.n||!o.sku||!(o.p>0))return alert("Name, SKU and a price above 0 are required.");
+if(pr.some(x=>x.sku==o.sku&&x.id!=ed))return alert("That SKU already exists.");
+if(ed){const x=pr.find(z=>z.id==ed);Object.assign(x,o);if(pim)x.im=pim}else pr.push({...o,id:"p"+Date.now(),i:pr.length?Math.max(...pr.map(z=>z.i))+1:0,im:pim});
+pim=null;ed=null;savep();render()}
+function ed_(id){ed=id;pim=null;render()}
+function del(id){if(confirm("Delete this product?")){pr=pr.filter(x=>x.id!=id);savep();render()}}
+function rs(){if(confirm("Replace all products with the sample catalogue?")){pr=SEED.map(x=>({...x}));savep();render()}}
+function admin(){const u=me();
+if(!U().some(x=>x.r=="admin"))return af(1)+`<div class="w"><div class="notice">First-time setup: create the admin account for this browser.</div></div>`;
+if(!u){am="in";return af(0)}
+if(u.r!="admin")return `<div class="w sec"><h2>Admin only</h2><p>Log out and sign in with the admin account.</p><button class="btn s" onclick="out()">Log out</button></div>`;
+const x=ed&&pr.find(z=>z.id==ed)||{n:"",b:"",c:0,sku:"",p:"",s:"",d:"",sp:[],smp:0},g="width:100%";
+return `<div class="w sec"><h2>Admin dashboard</h2><div class="notice">Prototype: products and photos are saved in this browser only, not on a server, so other visitors cannot see them yet.</div><h3>${ed?'Edit product':'Add product'}</h3><form id="pf" onsubmit="event.preventDefault();sv()"><div style="display:grid;gap:8px;grid-template-columns:repeat(auto-fit,minmax(180px,1fr))"><input class="f" name="n" placeholder="Product name" value="${esc(x.n)}" required><input class="f" name="b" placeholder="Brand" value="${esc(x.b)}"><select name="c">${CATS.map((c,i)=>`<option value="${i}" ${x.c==i?'selected':''}>${c}</option>`).join("")}</select><input class="f" name="sku" placeholder="SKU" value="${esc(x.sku)}" required><input class="f" name="p" type="number" min="1" placeholder="Price (₦)" value="${x.p}" required><input class="f" name="s" type="number" min="0" placeholder="Stock quantity" value="${x.s}" required></div><br><textarea class="f" name="d" rows="2" placeholder="Description" style="${g}">${esc(x.d)}</textarea><br><br><textarea class="f" name="sp" rows="4" placeholder="Specifications, one per line, e.g. Operating voltage: 3.3 V" style="${g}">${esc(x.sp.map(r=>r[0]+": "+r[1]).join("\n"))}</textarea><br><br><input type="file" accept="image/*" onchange="pick(this)"><br><img id="pv" alt="" ${x.im?`src="${x.im}"`:''} style="max-width:200px;border-radius:8px;margin-top:8px;display:${x.im?'block':'none'}"><br><label><input type="checkbox" name="rl" ${x.smp?'':'checked'}> Verified real product (removes the sample label)</label><br><br><button class="btn">${ed?'Save changes':'Add product'}</button>${ed?' <button type="button" class="btn s" onclick="ed=null;pim=null;render()">Cancel</button>':''}</form><h3>Products (${pr.length})</h3>${pr.map(p=>`<div class="row"><span style="display:flex;gap:10px;align-items:center"><span style="width:56px">${img(p)}</span><span>${esc(p.n)}<br><small>${esc(p.sku)} · ${N(p.p)} · stock ${p.s}${p.smp?' · sample':''}</small></span></span><span><button class="btn s" onclick="ed_('${p.id}')">Edit</button> <button class="btn" style="background:#c0392b" onclick="del('${p.id}')">Delete</button></span></div>`).join("")}<p><button class="btn s" onclick="rs()">Reset to sample catalogue</button> <button class="btn s" onclick="out()">Log out</button></p></div>`}
+addEventListener("hashchange",render);render();
+</script></body></html>
