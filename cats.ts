@@ -1,0 +1,1 @@
+export const CATS=["Microcontrollers & Dev Boards","Sensors & Modules","Electronic Components","Robotics & Automation","Power Supplies & Batteries","Test & Measurement","Soldering & Repair Tools","Cables, Connectors & Accessories","IoT & Wireless","Electrical & Solar"];
